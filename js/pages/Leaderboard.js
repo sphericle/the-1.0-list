@@ -83,6 +83,14 @@ export default {
                         </div>
                         <h2 v-if="entry.created.length > 0">Created ({{ entry.created.length }})</h2>
                         <table class="table" v-if="entry.created.length > 0">
+                            <tr v-if="entry.user === 'Astral'">
+                                <td class="rank">
+                                    <p>-</p>
+                                </td>
+                                <td class="level">
+                                    <a class="director" class="type-label-lg" target="_blank" href="score.link">1.0 Travel</a>
+                                </td>
+                            </tr>
                             <tr v-for="score in entry.created">
                                 <td class="rank">
                                     <p v-if="score.rank === null">&mdash;</p>

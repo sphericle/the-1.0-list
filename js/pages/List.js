@@ -87,15 +87,19 @@ export default {
                             <p class="director" style="cursor: pointer" @click="copyURL(level.id)">{{ level.id }}</p>
                         </li>
                         <li>
-                            <div class="type-title-sm">Password</div>
-                            <p>{{ level.password || 'Free to Copy' }}</p>
-                        </li>
-                        <li>
                             <div class="type-title-sm">Enjoyment</div>
                             <p>{{ averageEnjoyment(level.records) }}/10</p>
                         </li>
                     </ul>
                     <ul class="stats">
+                        <li>    
+                            <div class="type-title-sm">Object Count</div>
+                            <p>{{ parseStr(level.objectCount) || '?' }}</p>
+                        </li>
+                        <li>
+                            <div class="type-title-sm">Length</div>
+                            <p>{{ level.gdLength || '?' }}</p>
+                        </li>
                         <li>
                             <div class="type-title-sm">{{ level.songLink ? "NONG" : "Song" }}</div>
                             <p class="director" v-if="level.songLink"><a target="_blank" :href="songDownload" >{{ level.song || 'Song missing, please alert a list mod!' }}</a></p>

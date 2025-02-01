@@ -129,7 +129,22 @@ export async function fetchLeaderboard(list) {
     const flagResult = await fetch(`${dir}/_flags.json`);
     const flags = await flagResult.json()
 
-    const scoreMap = {};
+    const scoreMap = {
+        "astral": {
+            created: [],
+            verified: [],
+            completed: [{
+                rank: 0,
+                level: "1.0 Travel",
+                score: 999,
+                link: "https://youtube.com",
+                rating: 10,
+            }],
+            progressed: [],
+            userPacks: [{}],
+            flag: flags["astral"]
+        }
+    };
     const errs = [];
     let possibleMax = 0;
 
@@ -423,30 +438,26 @@ export async function fetchCreatorLeaderboard(list) {
             };
             const { created } = scoreMap[creator];
             let enjoyment = averageEnjoyment(level.records)
-            created.push({
-                rank,
-                level: level.name,
-                score: creatorScore(level),
-                enjoyment: enjoyment,
-                link: level.verification,
-            });
-            console.log(created)
+            if (enjoyment !== "?") {
+                let creatorScore = (level.creatorScore || 10) + enjoyment
+                created.push({
+                    rank,
+                    level: level.name,
+                    score: creatorScore,
+                    enjoyment: enjoyment,
+                    link: level.verification,
+                });
+            }
         });
     })
-
-    console.log(scoreMap)
 
     // Wrap in extra Object containing the user and total score
 
     const res = Object.entries(scoreMap).map(([user, scores]) => {
         const { created } = scores;
-        console.log(created)
-
 
         let total = created
             .reduce((prev, cur) => prev + cur.score, 0);
-
-        console.log(total)
 
         return {
             user,
