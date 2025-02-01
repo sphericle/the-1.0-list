@@ -156,7 +156,7 @@ export default {
                         <p class="error" v-for="error of errors">{{ error }}</p>
                     </div>
                     <div class="og">
-                        <p class="type-label-md">Some of website template from <a class="director" href="https://tsl.pages.dev/" target="_blank">The Shitty List</a>; Layout List originally created by <a class="director" href="https://www.youtube.com/@DJJDK" target="_blank">DJ JDK</a> & <a class="director" href="https://www.youtube.com/@Blathers" target="_blank">Blathers</a>.</p>
+                        <p class="type-label-md">Website layout from <a class="director" href="https://tsl.pages.dev/" target="_blank">The Shitty List</a> and  <a class="director" href="https://laylist.pages.dev/" target="_blank">The Layout List</a>.</p>
                     </div>
                     <hr class="divider">
                     <template v-if="staff">

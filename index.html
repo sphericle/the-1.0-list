@@ -6,7 +6,7 @@
         <meta property="og:title" content="The Layout List" />
         <meta property="og:description" content="A list of community-submitted layouts ranked by difficulty and tier" />
         <meta property="og:image" content="/assets/laylist.png" />
-        <title>The Layout List</title>
+        <title>The 1.0 List</title>
         <link rel="icon" href="/assets/laylist.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,8 +38,8 @@
     <body id="app">
         <header :class="{ dark: store.dark }">
             <div class="logo">
-                <h2>The LL</h2>
-                <p>v3.4</p>
+                <h2>The 1.0 List</h2>
+                <p>v2.0</p>
             </div>
             <nav class="nav">
                 <router-link class="nav__tab" to="/">
@@ -50,9 +50,6 @@
                 </router-link>
                 <router-link class="nav__tab" to="/roulette">
                     <span class="type-label-lg">Roulette</span>
-                </router-link>
-                <router-link class="nav__tab" to="/packs">
-                    <span class="type-label-lg">Packs</span>
                 </router-link>
                 <div class="nav__actions">
                     <button
