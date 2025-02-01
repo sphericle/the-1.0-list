@@ -1,28 +1,28 @@
 {
-  "id": 107337435,
-  "name": "Test Level",
-  "creators": ["Netfedex", "ewumd68"],
-  "verifier": "sphericle",
-  "verification": "https://www.youtube.com/watch?v=ineHGnSAhKA",
-  "percentToQualify": 100,
-  "song": "jklsdfjkldsfkldfskj",
-  "difficulty": 9,
-  "enjoyment": 10,
-  "records": [
-    {
-      "user": "Poke Zach",
-      "link": "https://youtu.be/un-ug_NzmX8?si=WQyUwEGVaBYV3gZ-",
-      "percent": 100,
-      "hz": 60,
-      "enjoyment": 7,
-      "mobile": true
-    },
-    {
-      "user": "Hydraniac",
-      "link": "https://medal.tv/games/geometry-dash/clips/jyHHnFsA4YNsIRcQv?invite=cr-MSw3ZHUsMTg1OTcxMTAwLA",
-      "percent": 100,
-      "hz": 240,
-      "enjoyment": 7
-    }
-  ]
+  	"id": 107337435,
+  	"name": "Test Level",
+  	"creators": ["Netfedex", "ewumd68"],
+  	"verifier": "sphericle",
+	"verification": "https://www.youtube.com/watch?v=ineHGnSAhKA",
+  	"percentToQualify": 100,
+  	"song": "jklsdfjkldsfkldfskj",
+  	"difficulty": 9,
+  	"enjoyment": 10,
+  	"records": [
+		{
+			"user": "Poke Zach",
+			"link": "https://youtu.be/un-ug_NzmX8?si=WQyUwEGVaBYV3gZ-",
+			"percent": 100,
+			"hz": 60,
+			"enjoyment": 7,
+			"mobile": true
+		},
+		{
+			"user": "Hydraniac",
+			"link": "https://medal.tv/games/geometry-dash/clips/jyHHnFsA4YNsIRcQv?invite=cr-MSw3ZHUsMTg1OTcxMTAwLA",
+			"percent": 100,
+			"hz": 240,
+			"enjoyment": 7
+		}
+	]
 }
