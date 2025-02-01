@@ -138,7 +138,7 @@ export async function fetchLeaderboard(list) {
                 rank: 0,
                 level: "1.0 Travel",
                 score: 999,
-                link: "https://youtube.com",
+                link: "https://www.youtube.com/watch?v=RFOBCOdGB_w",
                 rating: 10,
             }],
             progressed: [],
