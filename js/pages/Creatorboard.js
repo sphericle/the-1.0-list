@@ -31,6 +31,16 @@ export default {
                     </p>
                 </div>
                 <div class="board-container">
+                    <nav class="nav">
+                        <div class="nav__actions2">
+                             <router-link class="nav__cta2 type-label-lg" to="/leaderboard">
+                                <span class="type-label-lg">Playerboard</span>
+                              </router-link>
+                              <router-link class="nav__cta2 type-label-lg" to="/creatorboard">
+                                <span class="type-label-lg">Creatorboard</span>
+                            </router-link>
+                        </div>
+                    </nav>
                     <div class="search-container">
                         <input
                             type="text"
@@ -86,7 +96,7 @@ export default {
                                     <p v-else>#{{ score.rank }}</p>
                                 </td>
                                 <td class="level">
-                                    <a class="director" class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
+                                    <a class="director" class="type-label-lg" target="_blank" :href="score.link">{{ score.level }} - {{ score.enjoyment }}/10</a>
                                 </td>
                             </tr>
                         </table>

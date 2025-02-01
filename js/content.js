@@ -422,12 +422,12 @@ export async function fetchCreatorLeaderboard(list) {
                 flag: flags[person]
             };
             const { created } = scoreMap[creator];
-            let averageEnjoyment = averageEnjoyment(level.records)
+            let enjoyment = averageEnjoyment(level.records)
             created.push({
                 rank,
                 level: level.name,
                 score: creatorScore(level),
-                enjoyment: averageEnjoyment,
+                enjoyment: enjoyment,
                 link: level.verification,
             });
             console.log(created)
