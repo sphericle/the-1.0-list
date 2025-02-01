@@ -8,6 +8,14 @@
   	"song": "Waterflame - Clutterfunk",
   	"difficulty": 4,
   	"records": [
-		
+		{
+			"user": "tuner",
+			"link": "https://youtu.be/8PoL8c7ldaA",
+			"percent": 100,
+			"hz": 60,
+			"enjoyment": 9,
+			"mobile": false
+		}
+
 	]
 }
