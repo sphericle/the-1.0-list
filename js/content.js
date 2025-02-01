@@ -142,7 +142,7 @@ export async function fetchLeaderboard(list) {
             }],
             progressed: [],
             userPacks: [{
-                name: "goat pack",
+                name: "goat.....",
                 score: 1,
                 difficulty: 10,
             }],
