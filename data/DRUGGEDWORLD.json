@@ -15,6 +15,12 @@
 			"hz": 144,
 			"enjoyment": 3,
 			"mobile": false
+		},
+		{
+			"user": "Taublix",
+			"link": "https://www.youtube.com/watch?v=CA7Nkpj1Ugs&ab_channel=Taublix",
+			"percent": 100,
+			"mobile": false
 		}
 	]
 }
