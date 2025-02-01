@@ -8,6 +8,11 @@
   	"song": "Waterflame - Time Machine",
   	"difficulty": 2,
   	"records": [
-		
+		{
+			"user": "Taublix",
+			"link": "https://www.youtube.com/watch?v=9uT31B9qmaY&ab_channel=Taublix",
+			"percent": 100,
+			"mobile": false
+		}
 	]
 }
