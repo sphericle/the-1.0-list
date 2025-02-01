@@ -123,7 +123,7 @@ if (!debug) {
         leaderboard: localStorage.getItem("leaderboarddata")
             ? decompressData(localStorage.getItem("leaderboarddata"))
             : null,
-        creatorleaderboard: localStorage.getItem("creatorleaderboarddata")
+        creatorLeaderboard: localStorage.getItem("creatorleaderboarddata")
             ? decompressData(localStorage.getItem("creatorleaderboarddata"))
             : null,
         packs: localStorage.getItem("packsdata")

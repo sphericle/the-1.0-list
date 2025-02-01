@@ -221,7 +221,7 @@ export default {
 
     async mounted() {
         // Fetch leaderboard and errors from store
-        const [leaderboard, err] = this.store.leaderboard;
+        const [leaderboard, err] = this.store.creatorLeaderboard;
         this.leaderboard = leaderboard;
         this.err = err;
         
@@ -234,7 +234,7 @@ export default {
     watch: {
         store: {
             handler(updated) {
-                this.leaderboard = updated.leaderboard[0]
+                this.leaderboard = updated.creatorLeaderboard[0]
                 this.err = updated.errors
                 this.selectFromParam()
             }, 
