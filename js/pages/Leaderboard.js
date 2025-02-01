@@ -79,7 +79,7 @@ export default {
                         </div>
                         <h4>{{ localize(entry.total) + " / " + localize(entry.possibleMax) }}</h4>
                         <div class="pack-container" v-if="entry.userPacks.length > 0">
-                            <a v-for="pack in entry.userPacks" class="pack" :style="{ 'background': store.dark ? rgbaBind(darkPackColor(pack.difficulty), 0.2) : rgbaBind(lightPackColor(pack.difficulty), 0.3) }" :href="'https://1dot0list.pages.dev/#/packs/pack/' + pack.name.toLowerCase().replaceAll(' ', '_')">{{ pack.name }} (+{{ pack.score }})</a>
+                            <a v-for="pack in entry.userPacks" class="pack" :style="{ 'background': store.dark ? rgbaBind(darkPackColor(pack.difficulty), 0.2) : rgbaBind(lightPackColor(pack.difficulty), 0.3) }" :href="'https://1dot0list.pages.dev/#/packs/pack/' + pack.name.toLowerCase().replaceAll(' ', '_')">{{ pack.name }}</a>
                         </div>
                         <h2 v-if="entry.created.length > 0">Created ({{ entry.created.length }})</h2>
                         <table class="table" v-if="entry.created.length > 0">

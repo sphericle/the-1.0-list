@@ -141,7 +141,11 @@ export async function fetchLeaderboard(list) {
                 rating: 10,
             }],
             progressed: [],
-            userPacks: [{}],
+            userPacks: [{
+                name: "goat pack",
+                score: 1,
+                difficulty: 10,
+            }],
             flag: flags["astral"]
         }
     };

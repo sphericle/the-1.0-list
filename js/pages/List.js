@@ -94,7 +94,7 @@ export default {
                     <ul class="stats">
                         <li>    
                             <div class="type-title-sm">Object Count</div>
-                            <p>{{ parseStr(level.objectCount) || '?' }}</p>
+                            <p>{{ level.objectCount || '?' }}</p>
                         </li>
                         <li>
                             <div class="type-title-sm">Length</div>
