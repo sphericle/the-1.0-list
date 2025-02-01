@@ -24,6 +24,8 @@ export default [
 
     { path: "/roulette", component: Roulette },
 
+    /*
     { path: "/packs", component: Packs },
     { path: "/packs/pack/:pack", component: Packs },
+     */
 ];
