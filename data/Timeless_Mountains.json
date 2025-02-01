@@ -1,27 +1,28 @@
 {
-  	"id": 112906988,
-  	"name": "Timeless Mountains",
-  	"creators": ["Taublix"],
-  	"verifier": "Taublix",
-	"verification": "https://www.youtube.com/watch?v=QAWKLr-Dp78&ab_channel=Taublix",
-  	"percentToQualify": 100,
-  	"song": "Waterflame - -Timeless Mountains-",
-  	"difficulty": 4,
-  	"records": [
-		{
-			"user": "netfedex97",
-			"link": "https://youtu.be/_gMumY0YsKs",
-			"percent": 100,
-			"hz": 144,
-			"enjoyment": 9,
-			"mobile": false
-		},
-		{
-			"user": "Dragoon",
-			"link": "https://www.youtube.com/watch?v=k3E1pl7Ohqo",
-			"percent": 100,
-			"mobile": false
-		}
-		
-	]
+  "id": 112906988,
+  "name": "Timeless Mountains",
+  "creators": ["Taublix"],
+  "verifier": "Taublix",
+  "verification": "https://www.youtube.com/watch?v=QAWKLr-Dp78&ab_channel=Taublix",
+  "percentToQualify": 100,
+  "song": "Waterflame - -Timeless Mountains-",
+  "difficulty": 4,
+  "objectCount": "8828",
+  "gdLength": "1:21",
+  "records": [
+    {
+      "user": "netfedex97",
+      "link": "https://youtu.be/_gMumY0YsKs",
+      "percent": 100,
+      "hz": 144,
+      "enjoyment": 9,
+      "mobile": false
+    },
+    {
+      "user": "Dragoon",
+      "link": "https://www.youtube.com/watch?v=k3E1pl7Ohqo",
+      "percent": 100,
+      "mobile": false
+    }
+  ]
 }

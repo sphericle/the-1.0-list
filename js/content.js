@@ -129,6 +129,7 @@ export async function fetchLeaderboard(list) {
     const flagResult = await fetch(`${dir}/_flags.json`);
     const flags = await flagResult.json()
 
+    // IDK
     const scoreMap = {
         "astral": {
             created: [],

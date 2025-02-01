@@ -100,6 +100,9 @@ export default {
                             <div class="type-title-sm">Length</div>
                             <p>{{ level.gdLength || '?' }}</p>
                         </li>
+                        
+                    </ul>
+                    <ul class="stats">
                         <li>
                             <div class="type-title-sm">{{ level.songLink ? "NONG" : "Song" }}</div>
                             <p class="director" v-if="level.songLink"><a target="_blank" :href="songDownload" >{{ level.song || 'Song missing, please alert a list mod!' }}</a></p>

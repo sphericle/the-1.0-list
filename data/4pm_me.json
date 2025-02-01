@@ -1,32 +1,34 @@
 {
-  	"id": 112906988,
-  	"name": "4pm me",
-  	"creators": ["trung572"],
-  	"verifier": "trung572",
-	"verification": "https://youtu.be/T7qt40Qw-u0?si=KGPVpfk4-sxuLw2P",
-  	"percentToQualify": 100,
-  	"song": "Waterflame - Time Machine",
-  	"difficulty": 2,
-  	"records": [
-		{
-			"user": "Taublix",
-			"link": "https://www.youtube.com/watch?v=9uT31B9qmaY&ab_channel=Taublix",
-			"percent": 100,
-			"mobile": false
-		},
-		{
-			"user": "ten8mystery",
-			"link": "https://youtu.be/XEx5m1Hisrk",
-			"percent": 100,
-			"mobile": false
-		},
-		{
-			"user": "tuner",
-			"link": "https://www.youtube.com/watch?v=aLbmvz15Myo",
-			"percent": 100,
-			"hz": 60,
-			"enjoyment": 10,
-			"mobile": false
-		}
-	]
+  "id": 112906988,
+  "name": "4pm me",
+  "creators": ["trung572"],
+  "verifier": "trung572",
+  "verification": "https://youtu.be/T7qt40Qw-u0?si=KGPVpfk4-sxuLw2P",
+  "percentToQualify": 100,
+  "song": "Waterflame - Time Machine",
+  "difficulty": 2,
+  "objectCount": "2327",
+  "gdLength": "0:30",
+  "records": [
+    {
+      "user": "Taublix",
+      "link": "https://www.youtube.com/watch?v=9uT31B9qmaY&ab_channel=Taublix",
+      "percent": 100,
+      "mobile": false
+    },
+    {
+      "user": "ten8mystery",
+      "link": "https://youtu.be/XEx5m1Hisrk",
+      "percent": 100,
+      "mobile": false
+    },
+    {
+      "user": "tuner",
+      "link": "https://www.youtube.com/watch?v=aLbmvz15Myo",
+      "percent": 100,
+      "hz": 60,
+      "enjoyment": 10,
+      "mobile": false
+    }
+  ]
 }
