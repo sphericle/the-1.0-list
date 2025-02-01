@@ -16,6 +16,21 @@
 			"hz": 10000,
 			"enjoyment": 9,
 			"mobile": false
+		},
+		{
+			"user": "Zubzelok",
+			"link": "https://www.youtube.com/watch?v=DyIZe6SxwA0",
+			"percent": 100,
+			"hz": 10000,
+			"enjoyment": 4,
+			"mobile": false
+		},
+		{
+			"user": "Dragoon",
+			"link": "https://www.youtube.com/watch?v=k3E1pl7Ohqo",
+			"percent": 100,
+			"hz": 10000,
+			"mobile": false
 		}
 	]
 }
