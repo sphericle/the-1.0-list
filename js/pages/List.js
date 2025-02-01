@@ -173,10 +173,6 @@ export default {
 
                     <h3>Tags</h3>
                     <p class="director" style="cursor:pointer;" @click="search('⭐')">⭐ Rated</p>
-                    <p class="director" style="cursor:pointer;" @click="search('✨')">✨ Subject to Exemptions</p>
-                    <p class="director" style="cursor:pointer;" @click="search('💫')">💫 Accepted Under Old Standards</p>
-                    <p class="director" style="cursor:pointer;" @click="search('🎖️')">🎖️ Creator Contest Winner</p>
-                    <p class="director" style="cursor:pointer;" @click="search('❌')">❌ Pending Removal</p>
 
                     <hr class="divider">
 
@@ -189,12 +185,6 @@ export default {
                             You must have achieved the record on the level that is listed on the site or on an approved bugfixed copy - please check the level ID before you submit a record!
                         </p>
                         <p>
-                            Records for Easy+ completions must have clicks or visual tap indication (source audio is acceptable for iPhone users). This does not include mods that add artificial click sounds.
-                        </p>
-                        <p>
-                            Complete raw footage is required alongside your record for any layouts in Extreme Tier or above.
-                        </p>
-                        <p>
                             The recording must have a previous attempt and death animation shown before the completion, unless the completion is on the first attempt.
                         </p>
                         <p>
@@ -204,44 +194,13 @@ export default {
                             Do not use secret routes, skips, or bug routes!
                         </p>
                         <p>
-                            Cheat Indicator is required for all completions via Geode, MegaHack, or iCreate Pro. If you do not have Cheat Indicator on, your record will likely be invalidated (this is not 100% required for mobile as of yet due to mobile limitations).
-                        </p>
-                    </div>
-                    <hr class="divider">
-                    <h3>Difficulty Rankings</h3>
-                    <div class="right-text">
-                        <p>
-                            Impossible Layout = Top Extreme Demons (401 to 750 Points)
-                        </p>
-                        <p>
-                            Legendary Layout = Mid Extreme Demons (201 to 400 Points)
-                        </p>
-                        <p>
-                            Extreme Layout = Beginner Extreme Demons (101 to 200 Points)
-                        </p>
-                        <p>
-                            Mythical Layout = High Insane Demons (71 to 100 Points)
-                        </p>
-                        <p>
-                            Insane Layout = Insane Demons (41 to 70 Points)
-                        </p>
-                        <p>
-                            Hard Layout = Hard Demons (21 to 40 Points)
-                        </p>
-                        <p>
-                            Medium Layout = Medium Demons (11 to 20 Points)
-                        </p>
-                        <p>
-                            Easy Layout = Easy Demons (6 to 10 Points)
-                        </p>
-                        <p>
-                            Beginner Layout = Non Demons (1 to 5 Points)
+                            Cheat Indicator is required for all completions via Geode, MegaHack, or iCreate Pro. If Cheat Indictor is not available, you are required to use Show Info Label.
                         </p>
                     </div>
                     <hr class="divider">
                     <div class="right-text">
                         <p>
-                            For your convenience, the Layout List caches the data for the list in your browser.
+                            For your convenience, The 1.0 List caches the data for the list in your browser.
                         </p>
                         <p>
                             By using the site, you agree to the storage of this data in your browser. 
