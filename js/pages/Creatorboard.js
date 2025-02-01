@@ -5,6 +5,7 @@ import Spinner from '../components/Spinner.js';
 import Copy from '../components/Copy.js'
 import Copied from '../components/Copied.js'
 import Scroll from '../components/Scroll.js'
+import { fetchCreatorLeaderboard, fetchList } from '../content.js';
 
 export default {
     components: { Spinner, Copy, Copied, Scroll },
@@ -49,8 +50,7 @@ export default {
                                 <p class="type-label-lg">#{{ index + 1 }}</p>
                             </td>
                             <td class="total">
-                                <p class="type-label-lg" v-if="ientry.total > 0">{{ localize(ientry.total) }}</p>
-                                <p class="type-label-lg" v-if="ientry.total == 0">{{ "—" }}</p> 
+                                <p class="type-label-lg">{{ localize(ientry.total) }}</p>
                             </td>
                             <td class="user" :class="{ 'active': selected == index }" :ref="selected == index ? 'selected' : undefined">
                                 <button @click="selected = index; copied = false;">
@@ -78,9 +78,6 @@ export default {
                             ></Copied>
                         </div>
                         <h4>{{ localize(entry.total) + " / " + localize(entry.possibleMax) }}</h4>
-                        <div class="pack-container" v-if="entry.userPacks.length > 0">
-                            <a v-for="pack in entry.userPacks" class="pack" :style="{ 'background': store.dark ? rgbaBind(darkPackColor(pack.difficulty), 0.2) : rgbaBind(lightPackColor(pack.difficulty), 0.3) }" :href="'https://laylist.pages.dev/#/packs/pack/' + pack.name.toLowerCase().replaceAll(' ', '_')">{{ pack.name }} (+{{ pack.score }})</a>
-                        </div>
                         <h2 v-if="entry.created.length > 0">Created ({{ entry.created.length }})</h2>
                         <table class="table" v-if="entry.created.length > 0">
                             <tr v-for="score in entry.created">
@@ -90,65 +87,6 @@ export default {
                                 </td>
                                 <td class="level">
                                     <a class="director" class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
-                                </td>
-                            </tr>
-                        </table>
-                        <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length }})</h2>
-                        <table class="table" v-if="entry.verified.length > 0">
-                            <tr v-for="score in entry.verified">
-                                <td class="rank">
-                                    <p v-if="score.rank === null">&mdash;</p>
-                                    <p v-else>#{{ score.rank }}</p>
-                                </td>
-                                <td class="level">
-                                    <a class="director" class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
-                                </td>
-                                <td class="score">
-                                    <p>+{{ localize(score.score) }}</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <h2 v-if="entry.completed.length > 0">Completed ({{ entry.completed.length }})</h2>
-                        <table class="table" v-if="entry.completed.length > 0">
-                            <tr v-for="score in entry.completed">
-                                <td class="rank">
-                                    <p v-if="score.rank === null">&mdash;</p>
-                                    <p v-else>#{{ score.rank }}</p>
-                                </td>
-                                <td class="level">
-                                    <a class="director" class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
-                                </td>
-                                <td class="score">
-                                    <img v-if="score.mobile" :src="'/assets/phone-landscape' + (store.dark ? '-dark' : '') + '.svg'" alt="Mobile">
-                                </td>
-                                <td class="score">
-                                    <p v-if="score.rating !== undefined && score.rating !== '?'" class="type-label-lg">{{ score.rating }}/10</p>
-                                    <p v-if="score.rating == undefined || score.rating == '?'" class="type-label-lg">{{ "?" }}/10</p>
-                                </td>
-                                <td class="score">
-                                    <p>+{{ localize(score.score) }}</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <h2 v-if="entry.progressed.length > 0">Progressed ({{ entry.progressed.length }})</h2>
-                        <table class="table" v-if="entry.progressed.length > 0">
-                            <tr v-for="score in entry.progressed">
-                                <td class="rank">
-                                    <p v-if="score.rank === null">&mdash;</p>
-                                    <p v-else>#{{ score.rank }}</p>
-                                </td>
-                                <td class="level">
-                                    <a class="director" class="type-label-lg" target="_blank" :href="score.link">{{ score.level }} - {{ score.percent }}%</a>
-                                </td>
-                                <td class="score">
-                                    <img v-if="score.mobile" :src="'/assets/phone-landscape' + (store.dark ? '-dark' : '') + '.svg'" alt="Mobile">
-                                </td>
-                                <td class="score">
-                                    <p v-if="score.rating !== undefined && score.rating !== '?'" class="type-label-lg">{{ score.rating }}/10</p>
-                                    <p v-if="score.rating == undefined || score.rating == '?'" class="type-label-lg">{{ "?" }}/10</p>
-                                </td>
-                                <td class="score">
-                                    <p>+{{ localize(score.score) }}</p>
                                 </td>
                             </tr>
                         </table>
@@ -221,8 +159,11 @@ export default {
 
     async mounted() {
         // Fetch leaderboard and errors from store
-        const [leaderboard, err] = this.store.creatorLeaderboard;
+        const list = await fetchList()
+        console.log(list)
+        const [leaderboard, err] = await fetchCreatorLeaderboard(list);
         this.leaderboard = leaderboard;
+        
         this.err = err;
         
         this.selectFromParam()
@@ -234,7 +175,7 @@ export default {
     watch: {
         store: {
             handler(updated) {
-                this.leaderboard = updated.creatorLeaderboard[0]
+                // this.leaderboard = updated.creatorLeaderboard[0]
                 this.err = updated.errors
                 this.selectFromParam()
             }, 

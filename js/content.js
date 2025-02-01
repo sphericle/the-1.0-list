@@ -402,6 +402,7 @@ export async function fetchCreatorLeaderboard(list) {
     }
 
     list.forEach(([err, rank, level]) => {
+        console.log(`processing ${level.name}`)
         if (err) {
             errs.push(err);
             return;
@@ -418,51 +419,39 @@ export async function fetchCreatorLeaderboard(list) {
             ) || person;
             scoreMap[creator] ??= {
                 created: [],
-                verified: [],
-                completed: [],
-                progressed: [],
-                userPacks: [],
                 flag: flags[person]
             };
             const { created } = scoreMap[creator];
+            let averageEnjoyment = averageEnjoyment(level.records)
             created.push({
                 rank,
                 level: level.name,
                 score: creatorScore(level),
-                enjoyment: averageEnjoyment(level.records),
+                enjoyment: averageEnjoyment,
                 link: level.verification,
             });
+            console.log(created)
         });
     })
 
-    Object.entries(completedPacksMap).forEach(([user, packs]) => {
-        const uniquePacks = Array.from(packs);
-        sortPacks(uniquePacks)
-
-        scoreMap[user].userPacks.push(...uniquePacks);
-    });
+    console.log(scoreMap)
 
     // Wrap in extra Object containing the user and total score
 
     const res = Object.entries(scoreMap).map(([user, scores]) => {
-        const { created, verified, completed, progressed, flag } = scores;
+        const { created } = scores;
+        console.log(created)
 
 
-        let total = [completed, progressed]
-            .flat()
+        let total = created
             .reduce((prev, cur) => prev + cur.score, 0);
 
-        scores.userPacks.forEach((pack) => {
-            total += packScore(pack, list)
-            pack['score'] = packScore(pack, list)
-        })
+        console.log(total)
 
         return {
             user,
-            flag,
             total: round(total),
             possibleMax,
-            userPacks: scores.userPacks,
             ...scores,
         };
     });
