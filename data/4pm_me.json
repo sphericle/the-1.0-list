@@ -13,6 +13,12 @@
 			"link": "https://www.youtube.com/watch?v=9uT31B9qmaY&ab_channel=Taublix",
 			"percent": 100,
 			"mobile": false
+		},
+		{
+			"user": "tuner",
+			"link": "https://www.youtube.com/watch?v=Rp95Kki3Q-Y&feature=youtu.be",
+			"percent": 100,
+			"mobile": false
 		}
 	]
 }
