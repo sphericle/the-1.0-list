@@ -1,17 +1,22 @@
 [
     {
         "role": "owner",
-        "name": "Hydraniac",
-        "link": "https://www.youtube.com/channel/UC5AUz9RpYbFygEgg7pQ8CFg"
+        "name": "Ewumd68",
+        "link": "https://www.youtube.com/@Ewumd68CreatorGuy"
+    },
+    {
+        "role": "owner",
+        "name": "netfedex97",
+        "link": "https://www.youtube.com/@netfedex97"
+    },
+    {
+        "role": "admin",
+        "name": "Sphericle",
+        "link": "https://www.youtube.com/@zSphericle"
     },
     {
         "role": "helper",
-        "name": "Xeronius",
-        "link": "https://www.youtube.com/channel/UCpYR5IK4cjD8jz4ow-oNuJw"
-    },
-    {
-        "role": "dev",
-        "name": "Mystikl",
-        "link": "https://www.youtube.com/@lMystikl"
+        "name": "tuner",
+        "link": "https://www.youtube.com/@tunertm"
     }
 ]
