@@ -21,6 +21,14 @@
 			"link": "https://www.youtube.com/watch?v=CA7Nkpj1Ugs&ab_channel=Taublix",
 			"percent": 100,
 			"mobile": false
+		},
+		{
+			"user": "tuner",
+			"link": "https://youtu.be/b6tgJVBS_Xo",
+			"percent": 100,
+			"hz": 240,
+			"enjoyment": 5,
+			"mobile": false
 		}
 	]
 }
