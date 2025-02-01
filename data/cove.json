@@ -1,14 +1,37 @@
 {
-  	"id": 112906988,
-  	"name": "The Hello Zone",
-  	"creators": ["TacoJed"],
-  	"verifier": "TacoJed",
-	"verification": "https://www.youtube.com/watch?v=_rhXBuQzikc",
+  	"id": 114128722,
+  	"name": "cove",
+  	"creators": ["netfedex97"],
+  	"verifier": "netfedex97",
+	"verification": "https://youtu.be/fCs7ZqBo6nc",
   	"percentToQualify": 100,
-  	"song": "DJVI - Back on Track",
+  	"song": "Waterflame - -Cove-",
   	"difficulty": 9,
   	"enjoyment": 10,
   	"records": [
-		
+		{
+			"user": "Taublix",
+			"link": "https://www.youtube.com/watch?v=o_zLCI1YjsI&ab_channel=Taublix",
+			"percent": 100,
+			"hz": 10000,
+			"enjoyment": 9,
+			"mobile": false
+		}
+		{
+			"user": "Taublix",
+			"link": "https://www.youtube.com/watch?v=o_zLCI1YjsI&ab_channel=Taublix",
+			"percent": 100,
+			"hz": 10000,
+			"enjoyment": 9,
+			"mobile": false
+		}
+		{
+			"user": "Taublix",
+			"link": "https://www.youtube.com/watch?v=o_zLCI1YjsI&ab_channel=Taublix",
+			"percent": 100,
+			"hz": 10000,
+			"enjoyment": 9,
+			"mobile": false
+		}
 	]
 }
