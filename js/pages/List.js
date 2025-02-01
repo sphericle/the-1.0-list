@@ -263,7 +263,7 @@ export default {
         listlevels: 0,
         staff: [],
         errors: [],
-        selected: 1,
+        selected: 0,
         toggledShowcase: false,
         roleIconMap,
         store,
