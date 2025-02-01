@@ -54,8 +54,8 @@ export default {
                         <h1 class="copy-name">  
                             {{ level.name }}
                         </h1>
-                        <Copy v-if="!copied" @click="copyURL('https://laylist.pages.dev/#/level/' + level.path); copied = true"></Copy>
-                        <Copied v-if="copied" @click="copyURL('https://laylist.pages.dev/#/level/' + level.path); copied = true"></Copied>
+                        <Copy v-if="!copied" @click="copyURL('https://1dot0list.pages.dev/#/level/' + level.path); copied = true"></Copy>
+                        <Copied v-if="copied" @click="copyURL('https://1dot0list.pages.dev/#/level/' + level.path); copied = true"></Copied>
                     </div>
                     <LevelAuthors :creators="level.creators" :verifier="level.verifier" :enjoyment="level.enjoyment || null"></LevelAuthors>
                     <h3>Difficulty: {{["Beginner", "Easy", "Medium", "Hard", "Insane", "Mythical", "Extreme", "Supreme", "Ethereal", "Legendary", "Silent", "Impossible"][level.difficulty]}} layout</h3>
@@ -126,8 +126,8 @@ export default {
                     <h1 class="copy-name">  
                         {{ selectedPack.name }}
                     </h1>
-                    <Copy v-if="!copied" @click="copyURL('https://laylist.pages.dev/#/packs/pack/' + selectedPack.name.toLowerCase().replaceAll(' ', '_')); copied = true"></Copy>
-                    <Copied v-if="copied" @click="copyURL('https://laylist.pages.dev/#/packs/pack/' + selectedPack.name.toLowerCase().replaceAll(' ', '_')); copied = true"></Copied>
+                    <Copy v-if="!copied" @click="copyURL('https://1dot0list.pages.dev/#/packs/pack/' + selectedPack.name.toLowerCase().replaceAll(' ', '_')); copied = true"></Copy>
+                    <Copied v-if="copied" @click="copyURL('https://1dot0list.pages.dev/#/packs/pack/' + selectedPack.name.toLowerCase().replaceAll(' ', '_')); copied = true"></Copied>
                 </div>
                     <h2>Difficulty: {{ ["Beginner", "Easy", "Medium", "Hard", "Insane", "Mythical", "Extreme", "Legendary"][selectedPack.difficulty] }}</h2>
                     <div class="pack-score">
@@ -137,7 +137,7 @@ export default {
                     <h2 v-if="!selectedPack.levels">Levels (5)</h2>
                     <p v-if="selectedPack.levels" class="type-body">
                         <template v-for="(level, index) in selectedPack.levels">
-                            <a class="director" :href="'https://laylist.pages.dev/#/level/' + level.path">{{ level.name }}</a>
+                            <a class="director" :href="'https://1dot0list.pages.dev/#/level/' + level.path">{{ level.name }}</a>
                             <span v-if="index < selectedPack.levels.length - 1">, </span>
                         </template>
                     </p>
@@ -146,7 +146,7 @@ export default {
                     <h2>Records ({{ selectedPack.records.length }})</h2>
                     <div class="pack-records">
                         <p v-for="record in selectedPack.records">
-                            <a class="director" :href="'https://laylist.pages.dev/#/leaderboard/user/' + record.toLowerCase().replaceAll(' ', '_')">{{ record }}</a>
+                            <a class="director" :href="'https://1dot0list.pages.dev/#/leaderboard/user/' + record.toLowerCase().replaceAll(' ', '_')">{{ record }}</a>
                         </p>
                     </div>
                 </div>

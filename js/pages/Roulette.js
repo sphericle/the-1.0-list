@@ -54,7 +54,7 @@ export default {
                                          <p v-if="level.songlink !== null">Nong: <a class="director" :href="level.songlink" target="_blank">{{ level.songname }}</a></p>
                                      </div>
                                 </div>
-                                <h2><a class="director" :href="'https://laylist.pages.dev/#/level/' + level.path" target="_blank">{{ level.name }}</a></h2>
+                                <h2><a class="director" :href="'https://1dot0list.pages.dev/#/level/' + level.path" target="_blank">{{ level.name }}</a></h2>
                                 <div>
                                     <div style="display: inline-block; width: 50%;">
                                         <p class="director" style="cursor: pointer" @click="copyURL(level.id)">{{ level.id }}</p>
@@ -79,7 +79,7 @@ export default {
                                         <p v-if="currentLevel.songlink !== null">Nong: <a class="director" :href="currentLevel.songlink" target="_blank">{{ currentLevel.songname }}</a></p>
                                     </div>
                                 </div>
-                                <h2><a class="director" :href="'https://laylist.pages.dev/#/level/' + currentLevel.path" target="_blank">{{ currentLevel.name }}</a></h2>
+                                <h2><a class="director" :href="'https://1dot0list.pages.dev/#/level/' + currentLevel.path" target="_blank">{{ currentLevel.name }}</a></h2>
                                 <div>
                                     <div style="display: inline-block; width: 50%;">
                                         <p class="director" style="cursor: pointer" @click="copyURL(currentLevel.id)">{{ currentLevel.id }}</p>
@@ -117,7 +117,7 @@ export default {
                                             <p v-if="level.songlink !== null">Nong: <a class="director" :href="level.songlink" target="_blank">{{ level.songname }}</a></p>
                                         </div> 
                                     </div>
-                                    <h2><a class="director" :href="'https://laylist.pages.dev/#/level/' + level.path" target="_blank">{{ level.name }}</a></h2>
+                                    <h2><a class="director" :href="'https://1dot0list.pages.dev/#/level/' + level.path" target="_blank">{{ level.name }}</a></h2>
                                     <div>
                                         <div style="display: inline-block; width: 50%;">
                                             <p class="director" style="cursor: pointer" @click="copyURL(level.id)">{{ level.id }}</p>
