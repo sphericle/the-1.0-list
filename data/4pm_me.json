@@ -19,6 +19,14 @@
 			"link": "https://youtu.be/XEx5m1Hisrk",
 			"percent": 100,
 			"mobile": false
+		},
+		{
+			"user": "tuner",
+			"link": "https://www.youtube.com/watch?v=aLbmvz15Myo",
+			"percent": 100,
+			"hz": 60,
+			"enjoyment": 10,
+			"mobile": false
 		}
 	]
 }
