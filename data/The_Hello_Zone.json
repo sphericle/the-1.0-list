@@ -8,6 +8,13 @@
   	"song": "DJVI - Back on Track",
   	"difficulty": 9,
   	"records": [
-		
+		{
+			"user": "tuner",
+			"link": "https://www.youtube.com/watch?v=lN9aWcmwKkw",
+			"percent": 100,
+			"hz": 60,
+			"enjoyment": 7.5,
+			"mobile": false
+		}
 	]
 }
