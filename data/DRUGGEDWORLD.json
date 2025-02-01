@@ -9,6 +9,13 @@
   	"difficulty": 6,
   	"enjoyment": 0,
   	"records": [
-		
+		{
+			"user": "netfedex97",
+			"link": "https://www.youtube.com/watch?v=WWeGJn5Fklw",
+			"percent": 100,
+			"hz": 144,
+			"enjoyment": 3,
+			"mobile": false
+		}
 	]
 }
