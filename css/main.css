@@ -1,0 +1,224 @@
+:root {
+    --color-background: white;
+    --color-on-background: black;
+    --color-background-hover: #eee;
+    --color-on-background-hover: black;
+    --color-primary: black;
+    --color-on-primary: white;
+    --color-error: #de0000;
+    --color-on-error: white;
+    --color-hover: rgb(168, 168, 168);
+    --color-on-hover: rgb(15, 15, 15);
+}
+
+main.dark,
+header.dark {
+    color-scheme: dark;
+    --color-background: #1c1b1f;
+    --color-on-background: white;
+    --color-background-hover: #27262c;
+    --color-on-background-hover: white;
+    --color-primary: #5d5e5e;
+    --color-primary-disabled: #1f213c;
+    --color-on-primary: white;
+    --color-error: #de0000;
+    --color-on-error: white;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header,
+main {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    display: grid;
+    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(
+            16em,
+            1fr
+        );
+    column-gap: 2rem;
+}
+
+header {
+    display: flex;
+    padding-inline: calc(25vw - 10rem);
+    height: 4rem;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    justify-content: center;
+}
+@media screen and (min-width: 1366px) {
+    header {
+        display: grid;
+        padding-inline: 0;
+    }
+}
+header .logo {
+    justify-self: end;
+    align-self: center;
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    white-space: nowrap;
+}
+header .nav {
+    flex: 1;
+}
+
+main {
+    height: 0;
+    flex: 1;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr);
+    column-gap: 2rem;
+}
+main > div {
+    overflow-y: auto;
+}
+
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 3;
+}
+
+input[type="checkbox"] {
+    height: 1.25rem;
+    width: 1.25rem;
+    cursor: pointer;
+    margin: 0;
+}
+
+.loading-cache.dark {
+    background-color: #1c1b1f;
+}
+
+.cache-text.dark {
+    color: white;
+    opacity: 0.3;
+}
+
+.divider {
+    width: 100%;
+    border: 1px solid var(--color-on-background);
+}
+
+.search {
+    border-radius: 14px;
+    border: 2px solid var(--color-background-hover);
+    width: 90%;
+    max-width: 22em;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    background-color: var(--color-background-hover);
+    transition: all, border 120ms ease-out;
+    position: relative;
+}
+
+
+.clear-search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-89%) translateX(-35%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 40%;
+    color: var(--color-on-background);
+}
+
+.x-lb {
+    transform: translateY(-88%) translateX(-320%);
+}
+
+.search-container {
+    position: relative;
+}
+
+.search:hover:not(:focus) {
+    border: 2px solid var(--color-hover);
+}
+
+.copy-container {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.copy-name {
+    float: left;
+    padding-right: 1rem;
+}
+
+.copy {
+    float: left;
+    padding-top:0.5rem;
+    height: 2rem;
+    cursor: pointer;
+    fill: var(--color-on-background-hover);
+    opacity: 0.4;
+    transition: opacity 120ms ease-out;
+}
+
+.copy:hover {
+    opacity: 1;
+}
+
+.copied {
+    float: left;
+    padding-top:0.5rem;
+    height: 2rem;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 120ms ease-out;
+}
+
+.right-text > p:not(:last-child)  {
+    padding-bottom:2em
+}
+
+.director:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .clear-search {
+        transform: translateY(-89%) translateX(-5%);
+    }
+    .x-lb {
+        transform: translateY(-89%) translateX(-32%);
+    }
+}
+
+.button-bar {
+    padding-left: 1.2rem;
+    padding-bottom: 0.5rem;
+    height: 1.3rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button-bar > * {
+    cursor: pointer;
+    fill: #1f213c;
+}
+
+.button-bar.dark > * {
+    fill: #FFFFFF
+}
