@@ -24,6 +24,14 @@
       "hz": 144,
       "enjoyment": 7,
       "mobile": false
+    },
+    {
+      "user": "tuner",
+      "link": "https://drive.google.com/file/d/1wSxIzRNdQbHY905cIRT3f6QhWt8P5RQY/view",
+      "percent": 100,
+      "hz": 240,
+      "enjoyment": 4,
+      "mobile": false
     }
   ]
 }
