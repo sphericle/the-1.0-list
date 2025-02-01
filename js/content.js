@@ -1,4 +1,4 @@
-import { score, packScore } from './config.js';
+import { score, packScore, creatorScore } from './config.js';
 import { round, sortPacks } from './util.js';
 
 /**
@@ -385,6 +385,91 @@ export async function fetchLeaderboard(list) {
     // Sort by total score
     return [res.sort((a, b) => b.total - a.total), errs];
     
+}
+
+export async function fetchCreatorLeaderboard(list) {
+    const flagResult = await fetch(`${dir}/_flags.json`);
+    const flags = await flagResult.json()
+
+    const scoreMap = {};
+    const errs = [];
+    let possibleMax = 0;
+
+    const completedPacksMap = {};
+
+    if (list === null) {
+        return [null, ['Failed to load list.']];
+    }
+
+    list.forEach(([err, rank, level]) => {
+        if (err) {
+            errs.push(err);
+            return;
+        }
+
+        if (rank === null) {
+            return;
+        }
+
+        // Creators
+        level.creators.forEach((person) => {
+            const creator = Object.keys(scoreMap).find(
+                (u) => u.toLowerCase() === person.toLowerCase(),
+            ) || person;
+            scoreMap[creator] ??= {
+                created: [],
+                verified: [],
+                completed: [],
+                progressed: [],
+                userPacks: [],
+                flag: flags[person]
+            };
+            const { created } = scoreMap[creator];
+            created.push({
+                rank,
+                level: level.name,
+                score: creatorScore(level),
+                enjoyment: averageEnjoyment(level.records),
+                link: level.verification,
+            });
+        });
+    })
+
+    Object.entries(completedPacksMap).forEach(([user, packs]) => {
+        const uniquePacks = Array.from(packs);
+        sortPacks(uniquePacks)
+
+        scoreMap[user].userPacks.push(...uniquePacks);
+    });
+
+    // Wrap in extra Object containing the user and total score
+
+    const res = Object.entries(scoreMap).map(([user, scores]) => {
+        const { created, verified, completed, progressed, flag } = scores;
+
+
+        let total = [completed, progressed]
+            .flat()
+            .reduce((prev, cur) => prev + cur.score, 0);
+
+        scores.userPacks.forEach((pack) => {
+            total += packScore(pack, list)
+            pack['score'] = packScore(pack, list)
+        })
+
+        return {
+            user,
+            flag,
+            total: round(total),
+            possibleMax,
+            userPacks: scores.userPacks,
+            ...scores,
+        };
+    });
+
+    // Sort by total score
+    return [res.sort((a, b) => b.total - a.total), errs];
+
 }
 
 export async function fetchPacks(list) {

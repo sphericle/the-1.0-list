@@ -1,5 +1,5 @@
 import routes from "./routes.js";
-import { fetchList, fetchLeaderboard, fetchPacks, fetchStaff } from "./content.js";
+import { fetchList, fetchLeaderboard, fetchPacks, fetchStaff, fetchCreatorLeaderboard } from "./content.js";
 
 console.clear();
 
@@ -42,6 +42,9 @@ if (!debug) {
     
         let cookieLeaderboard = await fetchLeaderboard(cookieList);
         localStorage.setItem("leaderboarddata", compressData(cookieLeaderboard));
+
+        let cookieCreatorLeaderboard = await fetchCreatorLeaderboard(cookieList);
+        localStorage.setItem("creatorleaderboarddata", compressData(cookieCreatorLeaderboard));
     
         let cookiePacks = await fetchPacks(cookieList);
         localStorage.setItem("packsdata", compressData(cookiePacks));
@@ -78,6 +81,18 @@ if (!debug) {
         localStorage.setItem("leaderboarddata", compressData(cookieLeaderboard));
     }
 
+    // Compress and store leaderboard locally if it doesn't exist
+    if (!localStorage.getItem("creatorleaderboarddata")) {
+        console.warn("Leaderboard not found in cache, refreshing...");
+        let cookieList = localStorage.getItem("listdata")
+            ? decompressData(localStorage.getItem("listdata"))
+            : await fetchList();
+        let cookieCreatorLeaderboard = await fetchCreatorLeaderboard(cookieList);
+
+        localStorage.setItem("listdata", compressData(cookieList));
+        localStorage.setItem("creatorleaderboarddata", compressData(cookieCreatorLeaderboard));
+    }
+
     // Compress and store packs locally if it doesn't exist
     if (!localStorage.getItem("packsdata")) {
         console.warn("Packs not found in cache, refreshing...");
@@ -108,6 +123,9 @@ if (!debug) {
         leaderboard: localStorage.getItem("leaderboarddata")
             ? decompressData(localStorage.getItem("leaderboarddata"))
             : null,
+        creatorleaderboard: localStorage.getItem("creatorleaderboarddata")
+            ? decompressData(localStorage.getItem("creatorleaderboarddata"))
+            : null,
         packs: localStorage.getItem("packsdata")
             ? decompressData(localStorage.getItem("packsdata"))
             : null,
@@ -117,6 +135,7 @@ if (!debug) {
 } else {
     const list = await fetchList();
     const leaderboard = await fetchLeaderboard(list);
+    const creatorLeaderboard = await fetchCreatorLeaderboard(list)
     const packs = await fetchPacks(list);
     const staff = await fetchStaff();
     store = Vue.reactive({
@@ -131,6 +150,7 @@ if (!debug) {
         staff,
         packs,
         leaderboard,
+        creatorLeaderboard,
         errors: [],
         version
     });
@@ -161,6 +181,13 @@ let app = Vue.createApp({
             localStorage.setItem("listdata", compressData(updatedList));
             localStorage.setItem("leaderboarddata", compressData(updatedLeaderboard));
         }
+        // Update leaderboard if it's different than what's stored locally
+        const updatedCreatorLeaderboard = await fetchCreatorLeaderboard(updatedList);
+        if (JSON.stringify(updatedCreatorLeaderboard) !== JSON.stringify(store.creatorLeaderboard)) {
+            console.info("Found new data in leaderboard! Overwriting...");
+            localStorage.setItem("listdata", compressData(updatedList));
+            localStorage.setItem("creatorleaderboarddata", compressData(updatedCreatorLeaderboard));
+        }
         // Update packs if it's different than what's stored locally
         const updatedPacks = await fetchPacks(updatedList);
         if (JSON.stringify(updatedPacks) !== JSON.stringify(store.packs)) {
@@ -172,6 +199,7 @@ let app = Vue.createApp({
         store.list = updatedList;
         store.staff = updatedStaff;
         store.leaderboard = updatedLeaderboard;
+        store.creatorLeaderboard = updatedCreatorLeaderboard;
         store.packs = updatedPacks;
         store.errors = updatedLeaderboard[1]; // Levels with errors are stored here
         console.info("Up to date!");

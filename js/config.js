@@ -53,6 +53,10 @@ export function score(rank, percent, minPercent) {
     return Math.max(round(score), 0);
 }
 
+export function creatorScore(level) {
+    return 5
+}
+
 
 // ------------------------
 // Score function (packs):

@@ -4,6 +4,7 @@ import Roulette from './pages/Roulette.js';
 import Packs from './pages/Packs.js';
 import ChallengeList from './Archived/ChallengeList.js';
 import ChallengeLeaderboard from './Archived/ChallengeLeaderboard.js';
+import Creatorboard from './pages/Creatorboard.js';
 
 export default [
     // Sets the browser link to access each page
@@ -15,6 +16,9 @@ export default [
 
     { path: "/leaderboard", component: Leaderboard },
     { path: "/leaderboard/user/:user", component: Leaderboard },
+
+    { path: "/creatorboard", component: Creatorboard },
+    { path: "/creatorboard/user/:user", component: Creatorboard },
 
     { path: "/challengeleaderboard", component: ChallengeLeaderboard },
 
