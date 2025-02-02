@@ -30,6 +30,14 @@
 			"hz": 240,
 			"enjoyment": 6,
 			"mobile": false
+		},
+		{
+			"user": "lineage",
+			"link": "https://www.youtube.com/watch?v=ChQlbapkaWA",
+			"percent": 100,
+			"hz": 240,
+			"enjoyment": 6,
+			"mobile": false
 		}
 	]
 }
