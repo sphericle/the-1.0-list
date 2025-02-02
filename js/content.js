@@ -129,27 +129,7 @@ export async function fetchLeaderboard(list) {
     const flagResult = await fetch(`${dir}/_flags.json`);
     const flags = await flagResult.json()
 
-    // IDK
-    const scoreMap = {
-        "astral": {
-            created: [],
-            verified: [],
-            completed: [{
-                rank: 0,
-                level: "1.0 Travel",
-                score: 500,
-                link: "https://www.youtube.com/watch?v=RFOBCOdGB_w",
-                rating: 10,
-            }],
-            progressed: [],
-            userPacks: [{
-                name: "goat.....",
-                score: 1,
-                difficulty: 10,
-            }],
-            flag: flags["astral"]
-        }
-    };
+    const scoreMap = {};
     const errs = [];
     let possibleMax = 0;
 
