@@ -37,6 +37,14 @@
       "hz": 240,
       "enjoyment": 7,
       "mobile": false
-    }
+    },
+    {
+			"user": "netfedex97",
+			"link": "https://youtu.be/_prlIk2fMZY",
+			"percent": 100,
+			"hz": 144,
+			"enjoyment": 6,
+			"mobile": false
+		}
   ]
 }
