@@ -7,7 +7,8 @@
   	"percentToQualify": 100,
   	"song": "Waterflame - Clutterfunk",
   	"difficulty": 4,
-	
+	"objectCount": "2028",
+  	"gdLength": "0:35",
   	"records": [
 		{
 			"user": "tuner",
@@ -16,7 +17,14 @@
 			"hz": 60,
 			"enjoyment": 9,
 			"mobile": false
+		},
+		{
+			"user": "netfedex97",
+			"link": "https://youtu.be/_prlIk2fMZY",
+			"percent": 100,
+			"hz": 144,
+			"enjoyment": 6,
+			"mobile": false
 		}
-
 	]
 }
