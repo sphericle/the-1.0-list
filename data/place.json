@@ -1,0 +1,21 @@
+{
+  	"id": 114809673,
+  	"name": "place",
+  	"creators": ["Drained"],
+  	"verifier": "Drained",
+  "verification": "https://www.youtube.com/watch?v=Lo0Bnda222o",
+  	"percentToQualify": 100,
+  	"song": "Rik4k - Luminosity",
+	"objectCount": "1259",
+  	"gdLength": "0:30",
+  	"records": [
+		{
+			"user": "netfedex97",
+			"link": "https://youtu.be/-WxIXLayE7k",
+			"percent": 100,
+			"hz": 144,
+			"enjoyment": 8,
+			"mobile": false
+		}
+	]
+}
