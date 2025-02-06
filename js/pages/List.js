@@ -212,7 +212,7 @@ export default {
                             the site to load very slowly and is not recommended.
                         </p>
                         <p>
-                            No data specific to you is collected or shared, and you can <u><a target="_blank" href="https://github.com/layout-list/layout-list/">view the site's source code here</a></u>.
+                            No data specific to you is collected or shared, and you can <u><a target="_blank" href="https://github.com/sphericle/the-1.0-list/">view the site's source code here</a></u>.
                         </p>
                     </div>
                 </div>
