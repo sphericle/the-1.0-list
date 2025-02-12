@@ -402,7 +402,6 @@ export async function fetchCreatorLeaderboard(list) {
     }
 
     list.forEach(([err, rank, level]) => {
-        console.log(`processing ${level.name}`)
         if (err) {
             errs.push(err);
             return;
