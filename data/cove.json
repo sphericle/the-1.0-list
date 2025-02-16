@@ -41,6 +41,14 @@
       "hz": 60,
       "enjoyment": 6,
       "mobile": false
+    },
+    {
+      "user": "schizo",
+      "link": "https://www.youtube.com/watch?v=4D5-JUZZN5Y",
+      "percent": 100,
+      "hz": 240,
+      "enjoyment": 6.5,
+      "mobile": false
     }
   ]
 }
