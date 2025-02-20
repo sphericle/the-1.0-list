@@ -42,12 +42,20 @@
       "mobile": false
     },
     {
-			"user": "netfedex97",
-			"link": "https://youtu.be/_prlIk2fMZY",
+	"user": "netfedex97",
+	"link": "https://youtu.be/_prlIk2fMZY",
+	"percent": 100,
+	"hz": 144,
+	"enjoyment": 6,
+	"mobile": false
+	},
+		{
+			"user": "Ramnitios",
+			"link": "https://youtu.be/gcGAoOqwBIc?si=dfegGTSsfx-a7ndp",
 			"percent": 100,
-			"hz": 144,
-			"enjoyment": 6,
-			"mobile": false
+			"hz": 90,
+			"enjoyment": 8,
+			"mobile": true
 		}
   ]
 }
