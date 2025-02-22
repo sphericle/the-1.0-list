@@ -24,6 +24,14 @@
 			"hz": 360,
 			"enjoyment": 7,
 			"mobile": false
+		},
+		{
+			"user": "Ramnitios",
+			"link": "https://youtu.be/Rkh4K3Ei-ao?si=cTE4zVGXctGjxlmr",
+			"percent": 100,
+			"hz": 90,
+			"enjoyment": 2,
+			"mobile": true
 		}
 	]
 }
