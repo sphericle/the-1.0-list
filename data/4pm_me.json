@@ -10,7 +10,7 @@
   "objectCount": "2327",
   "gdLength": "0:30",
   "records": [
-    {
+	  {
       "user": "Taublix",
       "link": "https://www.youtube.com/watch?v=9uT31B9qmaY&ab_channel=Taublix",
       "percent": 100,
@@ -48,6 +48,14 @@
 	"hz": 144,
 	"enjoyment": 6,
 	"mobile": false
-    }
+    },
+	  {
+			"user": "Ramnitios",
+			"link": "https://youtu.be/gcGAoOqwBIc?si=dfegGTSsfx-a7ndp",
+			"percent": 100,
+			"hz": 90,
+			"enjoyment": 8,
+			"mobile": true
+	}
   ]
 }
