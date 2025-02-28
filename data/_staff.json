@@ -13,5 +13,10 @@
         "role": "admin",
         "name": "Sphericle",
         "link": "https://www.youtube.com/@zSphericle"
+    },
+    {
+        "role": "helper",
+        "name": "drained",
+        "link": "https://www.youtube.com/@EpicDrained"
     }
 ]
