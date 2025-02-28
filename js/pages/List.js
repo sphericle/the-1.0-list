@@ -211,7 +211,7 @@ export default {
                             The level must be at least 30 seconds in length (medium, long, or XL length).
                         </p>
                         <p>
-                            Using any 'hide' or 'notouch' objects are not allowed. Every other extra object option is allowed.
+                            Using any 'hide' or 'notouch' objects is not allowed. Every other extra object option is allowed.
                         </p>
                     </div>
                     <hr class="divider">
