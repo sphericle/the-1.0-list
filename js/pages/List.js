@@ -202,6 +202,19 @@ export default {
                         </p>
                     </div>
                     <hr class="divider">
+                    <h3>Level Submission Requirements</h3>
+                    <div class="right-text">
+                        <p>
+                            You must use only objects from the 1.0 update. This does not include features, so scaling or using color groups is allowed.
+                        </p>
+                        <p>
+                            The level must be at least 30 seconds in length (medium, long, or XL length).
+                        </p>
+                        <p>
+                            Using any 'hide' or 'notouch' objects are not allowed. Every other extra object option is allowed.
+                        </p>
+                    </div>
+                    <hr class="divider">
                     <div class="right-text">
                         <p>
                             For your convenience, The 1.0 List caches the data for the list in your browser.
