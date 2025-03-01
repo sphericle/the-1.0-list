@@ -1,14 +1,21 @@
 {
-  "id": 115569957,
-  "name": "home",
-  "creators": ["drained"],
-  "verifier": "drained",
-  "verification": "https://youtu.be/Vc3UfcsrLJQ",
-  "percentToQualify": 100,
-  "song": "Ephixa - ye",
+	"id": 115569957,
+	"name": "home",
+	"creators": ["drained"],
+	"verifier": "drained",
+	"verification": "https://youtu.be/Vc3UfcsrLJQ",
+	"percentToQualify": 100,
+	"song": "Ephixa - ye",
 	"objectCount": "14485",
-  "gdLength": "0:30",
-  "records": [
-    
+	"gdLength": "0:30",
+	"records": [
+    		{
+			"user": "Ramnitios",
+			"link": "https://youtu.be/P7odGNBl1HA?si=8mGbKY6zn-SGKiza",
+			"percent": 100,
+			"hz": 90,
+			"enjoyment": 9,
+			"mobile": true
+		}
 	]
 }
