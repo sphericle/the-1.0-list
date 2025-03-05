@@ -293,7 +293,6 @@ export default {
 
     computed: {
         level() {
-            console.log(this.selected)
             return this.list && this.list[this.selected] && this.list[this.selected][2];
         },
         video() {
@@ -320,8 +319,6 @@ export default {
             let list = this.list
             // this was a lot of fun!
             let sortOption = parseInt(this.sortOption)
-
-            console.log(sortOption)
 
             // use the separate indexing for searching Shenanigans
             list = list.map((item, index) => ({ index, item }));
