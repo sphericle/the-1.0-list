@@ -30,6 +30,16 @@ export default {
                     </p>
                 </div>
                 <div class="board-container">
+                    <nav class="nav">
+                        <div class="nav__actions2">
+                             <router-link class="nav__cta2 type-label-lg" to="/leaderboard">
+                                <span class="type-label-lg">Playerboard</span>
+                              </router-link>
+                              <router-link class="nav__cta2 type-label-lg" to="/creatorboard">
+                                <span class="type-label-lg">Creatorboard</span>
+                            </router-link>
+                        </div>
+                    </nav>
                     <div class="search-container">
                         <input
                             type="text"
