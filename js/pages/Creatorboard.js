@@ -53,6 +53,10 @@ export default {
                     </div>
                     <div class="button-bar" style="padding-left: 2.5rem;" :class="store.dark ? 'dark' : ''">
                         <Scroll alt="Scroll to selected" v-if="selected > 14 && searchQuery === ''" @click="scrollToSelected()" />
+                        <select v-model="selectedNation">
+                            <option :value="null">All nations</option>
+                            <option v-for="flag in Object.keys(flagMap)" :value="flag">{{ flagMap[flag] }}</option>
+                        </select>
                     </div>
                     <table class="board" v-if="filteredLeaderboard.length > 0">
                         <tr v-for="({ entry: ientry, index }, i) in filteredLeaderboard" :key="index">
@@ -115,6 +119,8 @@ export default {
         store,
         searchQuery: '',
         copied: false,
+        selectedNation: null,
+        flags: {}
     }),
 
     methods: {
@@ -152,17 +158,14 @@ export default {
         },
 
         filteredLeaderboard() {
-            if (!this.searchQuery.trim()) {
-                return this.leaderboard.map((entry, index) => ({ index, entry }));
-            }
-    
             const query = this.searchQuery.toLowerCase().replace(/\s/g, '');
-    
+
             // Map each entry with its original index and filter based on the user name
             return this.leaderboard
                 .map((entry, index) => ({ index, entry }))
                 .filter(({ entry }) =>
-                    entry.user.toLowerCase().includes(query)
+                    (this.searchQuery.trim() ? entry.user.toLowerCase().includes(query) : true) &&
+                    (this.selectedNation ? entry.flag === this.selectedNation : true)
                 );
         },
     },
@@ -170,9 +173,22 @@ export default {
     async mounted() {
         // Fetch leaderboard and errors from store
         const list = await fetchList()
-        console.log(list)
         const [leaderboard, err] = await fetchCreatorLeaderboard(list);
         this.leaderboard = leaderboard;
+
+        this.flags = await fetch("../../data/_flags.json")
+            .then(async (res) => await res.json())
+        this.flagMap = await fetch("../../data/_flagMap.json")
+            .then(async (res) => await res.json())
+
+        var ret = {};
+        for (var key in this.flagMap) {
+            ret[this.flagMap[key]] = key;
+        }
+
+        this.flagMap = Object.fromEntries(
+            Object.entries(ret).filter(([key, value]) => Object.values(this.flags).includes(key))
+        );
         
         this.err = err;
         

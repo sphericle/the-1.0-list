@@ -30,6 +30,16 @@ export default {
                     </p>
                 </div>
                 <div class="board-container">
+                    <nav class="nav">
+                        <div class="nav__actions2">
+                             <router-link class="nav__cta2 type-label-lg" to="/leaderboard">
+                                <span class="type-label-lg">Playerboard</span>
+                              </router-link>
+                              <router-link class="nav__cta2 type-label-lg" to="/creatorboard">
+                                <span class="type-label-lg">Creatorboard</span>
+                            </router-link>
+                        </div>
+                    </nav>
                     <div class="search-container">
                         <input
                             type="text"
@@ -85,26 +95,6 @@ export default {
                         <div class="pack-container" v-if="entry.userPacks.length > 0">
                             <a v-for="pack in entry.userPacks" class="pack" :style="{ 'background': store.dark ? rgbaBind(darkPackColor(pack.difficulty), 0.2) : rgbaBind(lightPackColor(pack.difficulty), 0.3) }" :href="'https://1dot0list.pages.dev/#/packs/pack/' + pack.name.toLowerCase().replaceAll(' ', '_')">{{ pack.name }}</a>
                         </div>
-                        <h2 v-if="entry.created.length > 0">Created ({{ entry.created.length }})</h2>
-                        <table class="table" v-if="entry.created.length > 0">
-                            <tr v-if="entry.user === 'Astral'">
-                                <td class="rank">
-                                    <p>-</p>
-                                </td>
-                                <td class="level">
-                                    <a class="director" class="type-label-lg" target="_blank" href="score.link">1.0 Travel</a>
-                                </td>
-                            </tr>
-                            <tr v-for="score in entry.created">
-                                <td class="rank">
-                                    <p v-if="score.rank === null">&mdash;</p>
-                                    <p v-else>#{{ score.rank }}</p>
-                                </td>
-                                <td class="level">
-                                    <a class="director" class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
-                                </td>
-                            </tr>
-                        </table>
                         <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length }})</h2>
                         <table class="table" v-if="entry.verified.length > 0">
                             <tr v-for="score in entry.verified">
