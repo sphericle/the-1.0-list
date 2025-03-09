@@ -10,6 +10,13 @@
   "gdLength": "0:30",
   "creatorScore": 1,
   "records": [
-    
+    {
+			"user": "netfedex97",
+			"link": "https://youtu.be/DXcH9cG09Bg",
+			"percent": 100,
+			"hz": 144,
+			"enjoyment": 1,
+			"mobile": false
+		}
   ]
 }
