@@ -49,6 +49,12 @@
       "hz": 240,
       "enjoyment": 6.5,
       "mobile": false
+    },
+    {
+      "user": "ClawBuckle",
+      "link": "https://youtu.be/O7T00quPB84?si=OO93HYnEHzirQ8XL",
+      "percent": 100,
+      "mobile": true
     }
   ]
 }
