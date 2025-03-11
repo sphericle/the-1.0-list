@@ -213,6 +213,9 @@ export default {
                         <p>
                             Using any 'hide' or 'notouch' objects is not allowed. Every other extra object option is allowed.
                         </p>
+                        <p>
+                            Even though the decoration and gameplay standard in this server is minimal, the standard still exists and levels that do not meet the standard will not be accepted.
+                        </p>
                     </div>
                     <hr class="divider">
                     <div class="right-text">
