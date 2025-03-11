@@ -25,6 +25,14 @@
 			"hz": 144,
 			"enjoyment": 2,
 			"mobile": false
+		},
+		{
+			"user": "jaysucks",
+			"link": "https://youtu.be/4wG4EU0hyrw?si=I6ABo0e33wGMygzS",
+			"percent": 100,
+			"hz": 60,
+			"enjoyment": 1,
+			"mobile": true
 		}
 	]
 }
