@@ -211,7 +211,7 @@ export default {
                             The level must be at least 30 seconds in length (medium, long, or XL length).
                         </p>
                         <p>
-                            Using any 'hide' or 'notouch' objects is not allowed. Every other extra object option is allowed.
+                            Using any 'hide', 'passable', or 'notouch' objects is not allowed. Every other extra object option is allowed.
                         </p>
                         <p>
                             Even though the decoration and gameplay standard in this server is minimal, the standard still exists and levels that do not meet the standard will not be accepted.
