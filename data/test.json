@@ -1,0 +1,16 @@
+
+{
+  "id": test by drained WITH permission,
+  "name": "test",
+  "creators": ["test"],
+  "verifier": "test",
+  "verification": "https://www.youtube.com/watch?v=KYisYYezk8k",
+  "percentToQualify": 100,
+  "song": "[TMM43] Ultimate Destruction",
+  "objectCount": "3530",
+  "gdLength": "0:38",
+  "creatorScore": 2,
+  "records": [
+    
+  ]
+}
