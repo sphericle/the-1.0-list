@@ -9,5 +9,13 @@
   "objectCount": "89024398023498032498",
   "gdLength": "13:04",
   "creatorScore": 10,
-  "records": []
+  "records": [
+    {
+      "user": "sphericle 2",
+      "link": "https://www.youtube.com/watch?v=ckIVjRW-YQg&t=2s",
+      "percent": 100,
+      "hz": 240,
+      "enjoyment": 10
+    }
+  ]
 }
