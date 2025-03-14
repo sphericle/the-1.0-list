@@ -393,9 +393,6 @@ export async function fetchCreatorLeaderboard(list) {
 
     const scoreMap = {};
     const errs = [];
-    let possibleMax = 0;
-
-    const completedPacksMap = {};
 
     if (list === null) {
         return [null, ['Failed to load list.']];
@@ -421,17 +418,30 @@ export async function fetchCreatorLeaderboard(list) {
                 flag: flags[person]
             };
             const { created } = scoreMap[creator];
-            let enjoyment = averageEnjoyment(level.records)
-            if (enjoyment !== "?") {
-                let creatorScore = (level.creatorScore || 10) + enjoyment
-                created.push({
-                    rank,
-                    level: level.name,
-                    score: creatorScore,
-                    enjoyment: enjoyment,
-                    link: level.verification,
-                });
+
+            // initialize enjoyment in the correct block scope
+            let enjoyment = null;
+            if (level.records && (level.records.length > 0)) {
+                enjoyment = averageEnjoyment(level.records)
+                if (enjoyment === "?")
+                    enjoyment = level.creatorScore || 10
+            } else {
+                
+                // this is assigned to the creatorScore because 
+                // the site should display it next to the level on the page
+                // even if there are no records
+                enjoyment = level.creatorScore || 10
             }
+
+            let creatorScore = (level.creatorScore || 10) + enjoyment
+
+            created.push({
+                rank,
+                level: level.name,
+                score: creatorScore,
+                enjoyment: enjoyment,
+                link: level.verification,
+            });
         });
     })
 
@@ -446,7 +456,6 @@ export async function fetchCreatorLeaderboard(list) {
         return {
             user,
             total: round(total),
-            possibleMax,
             ...scores,
         };
     });

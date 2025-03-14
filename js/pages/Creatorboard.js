@@ -91,7 +91,6 @@ export default {
                                 @click="copyURL('https://1dot0list.pages.dev/#/leaderboard/user/' + entry.user.toLowerCase().replaceAll(' ', '_')); copied = true"
                             ></Copied>
                         </div>
-                        <h4>{{ localize(entry.total) + " / " + localize(entry.possibleMax) }}</h4>
                         <h2 v-if="entry.created.length > 0">Created ({{ entry.created.length }})</h2>
                         <table class="table" v-if="entry.created.length > 0">
                             <tr v-for="score in entry.created">
@@ -100,7 +99,7 @@ export default {
                                     <p v-else>#{{ score.rank }}</p>
                                 </td>
                                 <td class="level">
-                                    <a class="director" class="type-label-lg" target="_blank" :href="score.link">{{ score.level }} - {{ score.enjoyment }}/10</a>
+                                    <a class="director" class="type-label-lg" target="_blank" :href="score.link">{{ score.level }} {{score.enjoyment !== null ? ("- " + score.enjoyment + "/10") : "" }}</a>
                                 </td>
                             </tr>
                         </table>
