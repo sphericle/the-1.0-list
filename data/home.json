@@ -33,6 +33,14 @@
 			"hz": 60,
 			"enjoyment": 1,
 			"mobile": true
-		}
+		},
+		{
+      			"user": "tuner",
+      			"link": "https://youtu.be/E23T2zKNDYo",
+      			"percent": 100,
+      			"hz": 60,
+      			"enjoyment": 5,
+      			"mobile": false
+    		}
 	]
 }
