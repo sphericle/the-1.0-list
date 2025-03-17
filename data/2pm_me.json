@@ -42,6 +42,14 @@
 			"hz": 60,
 			"enjoyment": 2,
 			"mobile": true
+		},
+		{
+			"user": "Auden788",
+			"link": "https://youtu.be/Yh7veZbTenI?si=i83ReZvcu2X39OGu",
+			"percent": 100,
+			"hz": 240,
+			"enjoyment": 9,
+			"mobile": false
 		}
 	]
 }
