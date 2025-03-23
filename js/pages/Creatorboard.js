@@ -51,7 +51,7 @@ export default {
                         />
                         <button v-if="searchQuery" @click="searchQuery = ''" class="clear-search x-lb">x</button>
                     </div>
-                    <div class="button-bar" style="padding-left: 2.5rem;" :class="store.dark ? 'dark' : ''">
+                    <div class="button-bar" style="padding-left: 2.5rem;" :class="true ? 'dark' : ''">
                         <Scroll alt="Scroll to selected" v-if="selected > 14 && searchQuery === ''" @click="scrollToSelected()" />
                         <select v-model="selectedNation">
                             <option :value="null">All nations</option>
