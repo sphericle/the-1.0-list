@@ -41,6 +41,21 @@
 .nav .nav__actions .nav__icon img {
     height: 1.5rem;
 }
+
+.color-picker-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.color-picker-wrapper input[type='color'] {
+    position: relative;
+    z-index: 0;
+}
+
+.nav .nav__actions .nav__icon img {
+    height: 1.5rem;
+}
 .nav .nav__actions .nav__cta {
     margin-left: 2rem;
     padding: 1rem;
@@ -83,11 +98,17 @@
 }
 
 .nav .nav__actions input[type='color'] {
-    border: 2px solid white;
-    border-radius: 50px;
-    width: 30px;
-    height: 30px;
-    padding: 2px;
-    background-color: var(--color-on-background-hover);
     cursor: pointer;
+    opacity: 0%;
+}
+
+.color-picker-wrapper img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 2.2rem;
+    width: 2.2rem;
+    pointer-events: none;
+    z-index: 1;
 }

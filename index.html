@@ -51,7 +51,10 @@
                     <span class="type-label-lg">Roulette</span>
                 </router-link>
                 <div class="nav__actions">
-                    <input type="color" class="nav__icon" v-model="selectedColor" v-if="store">
+                    <div class="color-picker-wrapper nav__icon">
+                        <img :src="store.dark ? '/assets/palette-dark.svg' : '/assets/palette.svg'" alt="Color Palette"/>
+                        <input type="color" class="nav__icon" v-model="selectedColor" v-if="store">
+                    </div>
                     <a class="nav__icon" href="https://discord.gg/EqTZrN2Spm" target="_blank">
                         <img :src="!store.dark ? '/assets/discord-dark.svg' : '/assets/discord.svg'" alt="Discord Logo"/>
                     </a>
