@@ -83,11 +83,11 @@
 }
 
 .nav .nav__actions input[type='color'] {
-    border: 2px solid var(--color-background-hover);
+    border: 2px solid white;
     border-radius: 50px;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     padding: 2px;
-    background-color: transparent;
+    background-color: var(--color-on-background-hover);
     cursor: pointer;
 }
