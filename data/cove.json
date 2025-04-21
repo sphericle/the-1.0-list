@@ -57,6 +57,14 @@
       "hz": 60,
       "enjoyment": 10,
       "mobile": true
+    },
+    {
+      "user": "aciemru",
+      "link": "https://www.youtube.com/watch?v=ESRgaJMC9Ww",
+      "percent": 100,
+      "hz": 360,
+      "enjoyment": 9.5,
+      "mobile": false
     }
   ]
 }
