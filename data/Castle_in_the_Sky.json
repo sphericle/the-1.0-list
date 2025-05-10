@@ -10,6 +10,13 @@
   	"gdLength": "0:46",
 	"creatorScore": 5,
   	"records": [
-		  
+		  {
+			"user": "Ramnitios",
+			"link": "https://youtu.be/nIdv-JKRDL8?si=34KGd-HwtlW2N6p1",
+			"percent": 100,
+			"hz": 90,
+			"enjoyment": 3,
+			"mobile": true
+		}
 	]
 }
