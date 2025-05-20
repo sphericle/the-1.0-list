@@ -11,11 +11,6 @@
     },
     {
         "role": "admin",
-        "name": "Sphericle",
-        "link": "https://www.youtube.com/@zSphericle"
-    },
-    {
-        "role": "admin",
         "name": "drained",
         "link": "https://www.youtube.com/@EpicDrained"
     },
@@ -23,5 +18,10 @@
         "role": "helper",
         "name": "Ramnitios",
         "link": "https://www.youtube.com/@Ramnitiosgd"
+    },
+    {
+        "role": "dev",
+        "name": "sphericle",
+        "link": "https://www.youtube.com/@zSphericle"
     }
 ]
