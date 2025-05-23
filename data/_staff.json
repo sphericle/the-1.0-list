@@ -10,13 +10,13 @@
         "link": "https://www.youtube.com/@tunertm"
     },
     {
+        "role": "admin",
+        "name": "sphericle",
+        "link": "https://www.youtube.com/@zSphericle"
+    },
+    {
         "role": "helper",
         "name": "Ramnitios",
         "link": "https://www.youtube.com/@Ramnitiosgd"
-    },
-    {
-        "role": "dev",
-        "name": "sphericle",
-        "link": "https://www.youtube.com/@zSphericle"
     }
 ]
