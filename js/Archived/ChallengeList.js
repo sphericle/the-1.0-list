@@ -121,7 +121,7 @@ export default {
                         <p class="error" v-for="error of errors">{{ error }}</p>
                     </div>
                     <div class="og">
-                        <p class="type-label-md">Website layout on <a href="https://tsl.pages.dev/" target="_blank">TheShittyList</a>, made by DJ JDK & Blathers.</p>
+                        <p class="type-label-md">Website layout from <a class="director" href="https://tsl.pages.dev/" target="_blank">The Shitty List</a> and  <a class="director" href="https://laylist.pages.dev/" target="_blank">The Layout List</a>.</p>
                     </div>
                     <div class="notice type-label-sm" style="margin-top:-10">
                         <p>The challenge list has been archived, effective 8/19/24.  Records will no longer be accepted.</p>
