@@ -64,8 +64,8 @@ export default {
                         <h1 class="copy-name">  
                             {{ level.name }}
                         </h1>
-                        <Copy v-if="!copied" @click="copyURL('https://1dot0list.pages.dev/#/level/' + level.path); copied = true"></Copy>
-                        <Copied v-if="copied" @click="copyURL('https://1dot0list.pages.dev/#/level/' + level.path); copied = true"></Copied>
+                        <Copy v-if="!copied" @click="copyURL('/#/level/' + level.path); copied = true"></Copy>
+                        <Copied v-if="copied" @click="copyURL('/#/level/' + level.path); copied = true"></Copied>
                     </div>
                     <LevelAuthors :creators="level.creators" :verifier="level.verifier" :enjoyment="level.enjoyment"></LevelAuthors>
                     <div v-if="level.showcase" class="tabs">
@@ -159,7 +159,7 @@ export default {
                         <p class="error" v-for="error of errors">{{ error }}</p>
                     </div>
                     <div class="og">
-                        <p class="type-label-md">Website layout from <a class="director" href="https://tsl.pages.dev/" target="_blank">The Shitty List</a> and  <a class="director" href="https://1dot0list.pages.dev/" target="_blank">The Layout List</a>.</p>
+                        <p class="type-label-md">Website layout from <a class="director" href="https://tsl.pages.dev/" target="_blank">The Shitty List</a> and  <a class="director" href="https://laylist.pages.dev/" target="_blank">The Layout List</a>.</p>
                     </div>
                     <hr class="divider">
                     <template v-if="staff">
